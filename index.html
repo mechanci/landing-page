@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasham's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <title>Centered Text with Background</title>
     <style>
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: start;
+            align-items: start;
             height: 100vh;
-            background: linear-gradient(135deg, #0f172a, #1e293b);
-            font-family: 'Inter', sans-serif;
-            color: #fff;
-            text-align: center;
+            background: url('./media/bg.JPG') no-repeat center center/cover;
+            font-family: "Lexend", serif;
+            font-optical-sizing: auto;
+            color: white;
         }
         .container {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+            padding: 15%;
+            border-radius: 10px;
+            gap: 1px;
         }
-        .hello {
-            font-size: 2rem;
-            font-weight: 300;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: rgba(255, 255, 255, 0.7);
+        .text1 {
+            color: whitesmoke;
+            padding: 5px;
+            font-style: normal;
         }
-        .name {
-            font-size: 6rem;
-            font-weight: 800;
-            letter-spacing: -2px;
-            text-transform: uppercase;
-            background: linear-gradient(45deg, #3b82f6, #06b6d4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: fadeIn 1s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+        .text2 {
+            font-weight: 700;
+            font-size: 84px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="hello">Hello from</div>
-        <div class="name">Hasham</div>
+        <div class="text1">hello from</div>
+        <div class="text2">Hasham</div>
     </div>
 </body>
 </html>
