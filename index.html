@@ -8,37 +8,71 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <title>Hasham</title>
     <style>
+        /* Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
+        /* Body Styling */
         body {
-            display: flex;
-            justify-content: start;
-            align-items: start;
             height: 100vh;
-            background: url('./media/bg.JPG') no-repeat center center/cover;
-            font-family: "Lexend", serif;
-            font-optical-sizing: auto;
+            background: url('./media/bg.JPG') no-repeat center center/cover; /* Always centered */
+            font-family: "Lexend", sans-serif;
             color: white;
+            overflow: hidden;
         }
+
+        /* Text Container - Positioned in Q1 to Q4 */
         .container {
+            position: absolute;
+            left: 10vw;
+            top: 25vh; /* Adjusted for rule of thirds */
+            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
-            padding: 15%;
-            border-radius: 10px;
-            gap: 1px;
+            text-align: left;
+            gap: 0.5rem;
         }
+
+        /* Subtext */
         .text1 {
-            color: whitesmoke;
-            padding: 5px;
-            font-style: normal;
+            font-size: clamp(1rem, 2vw, 2rem);  
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
         }
+
+        /* Focus Text */
         .text2 {
+            font-size: clamp(3rem, 8vw, 6rem);  
             font-weight: 700;
-            font-size: 84px;
+            line-height: 1.2;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .container {
+                left: 5vw; /* Adjusts for smaller screens */
+                top: 30vh;
+            }
+            .text2 {
+                font-size: clamp(2.5rem, 10vw, 4rem);  
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                left: 5vw;
+                top: 35vh;
+            }
+            .text1 {
+                font-size: clamp(0.8rem, 4vw, 1.5rem);
+            }
+            .text2 {
+                font-size: clamp(2rem, 12vw, 3rem);
+            }
         }
     </style>
 </head>
