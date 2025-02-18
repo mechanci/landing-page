@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <title>Hasham</title>
     <style>
         /* Reset */
@@ -34,11 +35,11 @@
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
-            gap: 0.5rem;
         }
 
         /* Subtext */
         .text1 {
+            padding-left: 6px;
             font-size: clamp(1rem, 2vw, 2rem);  
             font-weight: 300;
             color: rgba(255, 255, 255, 0.8);
@@ -51,14 +52,62 @@
             line-height: 1.2;
         }
 
+        /* Footer Styling */
+        .footer {
+            position: absolute;
+            bottom: 2%;
+            width: 100%;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 0.3rem;
+            transition: font-weight 0.3s ease;
+        }
+
+        .footer:hover {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links a:hover {
+            color: white;
+        }
+
+        .photo-credit {
+            font-size: 0.8rem;
+            font-weight: 250;
+            opacity: 0.7;
+        }
+
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .container {
-                left: 5vw; /* Adjusts for smaller screens */
+                left: 5vw;
                 top: 30vh;
             }
             .text2 {
                 font-size: clamp(2.5rem, 10vw, 4rem);  
+            }
+            .footer {
+                font-size: 0.8rem;
             }
         }
 
@@ -73,6 +122,9 @@
             .text2 {
                 font-size: clamp(2rem, 12vw, 3rem);
             }
+            .footer {
+                font-size: 0.7rem;
+            }
         }
     </style>
 </head>
@@ -81,5 +133,20 @@
         <div class="text1">hello from</div>
         <div class="text2">Hasham</div>
     </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://twitter.com/rizvi_hasham/" target="_blank"><i data-lucide="twitter"></i></a>
+            <a href="https://github.com/mechanci/" target="_blank"><i data-lucide="github"></i></a>
+            <a href="https://linkedin.com/in/hashamrizvi/" target="_blank"><i data-lucide="linkedin"></i></a>
+            <a href="mailto:rizvi.hashamabbas@gmail.com"><i data-lucide="mail"></i></a>
+        </div>
+        <div class="photo-credit">Background photo by <a href="https://www.instagram.com/irfan_abbas/" target="_blank" style="color: inherit;">Irfan Abbas</a></div>
+    </footer>
+
+    <script>
+        lucide.createIcons({ attrs: { "stroke-width": 1 } });
+    </script>
 </body>
 </html>
